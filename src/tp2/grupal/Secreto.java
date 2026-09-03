@@ -6,6 +6,9 @@ import javax.swing.JPasswordField;
 import javax.swing.JPanel;
 import javax.swing.JDesktopPane;
 import javax.swing.JTextField;
+import java.util.Random;
+
+
 public class Secreto extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Secreto.class.getName());
@@ -15,9 +18,10 @@ public class Secreto extends javax.swing.JFrame {
      */
     public Secreto() {
         initComponents();
-        Violeta.setEchoChar('$');
-        Amarillo.setEchoChar('$');
-        Verde.setEchoChar('$');
+        int intentos;
+        int ayudas;
+        Random random = new Random();
+        
     }
 
     /**
