@@ -17,6 +17,9 @@ public class Secreto extends javax.swing.JFrame {
      */
     public Secreto() {
         initComponents();
+        Violeta.setEchoChar('$');
+        Amarillo.setEchoChar('$');
+        Verde.setEchoChar('$');
     }
 
     /**
@@ -50,17 +53,14 @@ public class Secreto extends javax.swing.JFrame {
         Amarillo.setBackground(new java.awt.Color(255, 255, 153));
         Amarillo.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Amarillo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Amarillo.setText("$");
 
         Verde.setBackground(new java.awt.Color(153, 255, 153));
         Verde.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Verde.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Verde.setText("$");
 
         Violeta.setBackground(new java.awt.Color(204, 153, 255));
         Violeta.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Violeta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Violeta.setText("$");
         Violeta.setToolTipText("");
         Violeta.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         Violeta.setName(""); // NOI18N
@@ -91,6 +91,7 @@ public class Secreto extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 102));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Por favor, ingresa exactamente 3 números.");
         jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(255, 255, 204), null));
 
@@ -98,6 +99,7 @@ public class Secreto extends javax.swing.JFrame {
         jTextArea1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
         jTextArea1.setForeground(new java.awt.Color(255, 255, 102));
         jTextArea1.setText("Codigo Secreto");
+        jTextArea1.setBorder(null);
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setBackground(new java.awt.Color(210, 220, 221));
@@ -141,9 +143,9 @@ public class Secreto extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(83, 83, 83))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
