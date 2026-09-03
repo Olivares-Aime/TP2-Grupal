@@ -53,14 +53,17 @@ public class Secreto extends javax.swing.JFrame {
         Amarillo.setBackground(new java.awt.Color(255, 255, 153));
         Amarillo.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Amarillo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Amarillo.setText("$");
 
         Verde.setBackground(new java.awt.Color(153, 255, 153));
         Verde.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Verde.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Verde.setText("$");
 
         Violeta.setBackground(new java.awt.Color(204, 153, 255));
         Violeta.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Violeta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Violeta.setText("$");
         Violeta.setToolTipText("");
         Violeta.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         Violeta.setName(""); // NOI18N
