@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package tp2.grupal;
-
-/**
- *
- * @author usuario1
- */
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JPanel;
+import javax.swing.JDesktopPane;
+import javax.swing.JTextField;
 public class Secreto extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Secreto.class.getName());
@@ -31,41 +29,50 @@ public class Secreto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane2 = new javax.swing.JDesktopPane();
+        Fondo = new javax.swing.JDesktopPane();
         Panel1 = new javax.swing.JPanel();
         Amarillo = new javax.swing.JPasswordField();
         Verde = new javax.swing.JPasswordField();
         Violeta = new javax.swing.JPasswordField();
-        Label1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        Titulo = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        pistas = new javax.swing.JLabel();
+        revelar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        Panel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        numero = new javax.swing.JTextField();
+        Panel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jDesktopPane2.setBackground(new java.awt.Color(0, 153, 153));
+        Fondo.setBackground(new java.awt.Color(0, 153, 153));
 
         Panel1.setBackground(new java.awt.Color(204, 204, 204));
         Panel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        Amarillo.setEditable(false);
         Amarillo.setBackground(new java.awt.Color(255, 255, 153));
         Amarillo.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Amarillo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Amarillo.setText("$");
+        Amarillo.setEchoChar('$');
 
+        Verde.setEditable(false);
         Verde.setBackground(new java.awt.Color(153, 255, 153));
         Verde.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Verde.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Verde.setText("$");
+        Verde.setEchoChar('$');
 
+        Violeta.setEditable(false);
         Violeta.setBackground(new java.awt.Color(204, 153, 255));
         Violeta.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         Violeta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Violeta.setText("$");
         Violeta.setToolTipText("");
         Violeta.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        Violeta.setEchoChar('$');
         Violeta.setName(""); // NOI18N
 
         javax.swing.GroupLayout Panel1Layout = new javax.swing.GroupLayout(Panel1);
@@ -92,74 +99,133 @@ public class Secreto extends javax.swing.JFrame {
                 .addGap(16, 16, 16))
         );
 
-        Label1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Label1.setForeground(new java.awt.Color(255, 255, 102));
-        Label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Label1.setText("Por favor, ingresa exactamente 3 números.");
-        Label1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(255, 255, 204), null));
+        pistas.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        pistas.setForeground(new java.awt.Color(255, 255, 102));
+        pistas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pistas.setText("Por favor, ingresa exactamente 3 números.");
+        pistas.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(255, 255, 204), null));
 
-        Titulo.setBackground(new java.awt.Color(0, 153, 153));
-        Titulo.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
-        Titulo.setForeground(new java.awt.Color(255, 255, 102));
-        Titulo.setText("Codigo Secreto");
-        Titulo.setBorder(null);
-        jScrollPane1.setViewportView(Titulo);
+        revelar.setBackground(new java.awt.Color(210, 220, 221));
+        revelar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        revelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tp2/grupal/Imagen boton.jpeg"))); // NOI18N
+        revelar.setText("Revelar");
+        revelar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton1.setBackground(new java.awt.Color(210, 220, 221));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tp2/grupal/Imagen boton.jpeg"))); // NOI18N
-        jButton1.setText("Revelar");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 3, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 102));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Codigo Secreto");
 
-        jDesktopPane2.setLayer(Panel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane2.setLayer(Label1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane2.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane2.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel2.setBackground(new java.awt.Color(255, 204, 204));
 
-        javax.swing.GroupLayout jDesktopPane2Layout = new javax.swing.GroupLayout(jDesktopPane2);
-        jDesktopPane2.setLayout(jDesktopPane2Layout);
-        jDesktopPane2Layout.setHorizontalGroup(
-            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane2Layout.createSequentialGroup()
-                .addGroup(jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDesktopPane2Layout.createSequentialGroup()
-                        .addGap(102, 102, 102)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jDesktopPane2Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(Label1, javax.swing.GroupLayout.PREFERRED_SIZE, 897, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jDesktopPane2Layout.createSequentialGroup()
-                        .addGap(413, 413, 413)
-                        .addComponent(jButton1)))
-                .addContainerGap(73, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(92, 92, 92))
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel2.setText("Escribe 3 dígitos + ENTER");
+
+        numero.setBackground(new java.awt.Color(255, 204, 204));
+        numero.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(51, 51, 51), java.awt.Color.lightGray));
+
+        javax.swing.GroupLayout Panel2Layout = new javax.swing.GroupLayout(Panel2);
+        Panel2.setLayout(Panel2Layout);
+        Panel2Layout.setHorizontalGroup(
+            Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel2Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numero, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
-        jDesktopPane2Layout.setVerticalGroup(
-            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane2Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
+        Panel2Layout.setVerticalGroup(
+            Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(numero, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+
+        Panel3.setBackground(new java.awt.Color(0, 153, 153));
+        Panel3.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+
+        javax.swing.GroupLayout Panel3Layout = new javax.swing.GroupLayout(Panel3);
+        Panel3.setLayout(Panel3Layout);
+        Panel3Layout.setHorizontalGroup(
+            Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 167, Short.MAX_VALUE)
+        );
+        Panel3Layout.setVerticalGroup(
+            Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        Fondo.setLayer(Panel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Fondo.setLayer(pistas, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Fondo.setLayer(revelar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Fondo.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Fondo.setLayer(Panel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Fondo.setLayer(Panel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout FondoLayout = new javax.swing.GroupLayout(Fondo);
+        Fondo.setLayout(FondoLayout);
+        FondoLayout.setHorizontalGroup(
+            FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FondoLayout.createSequentialGroup()
+                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FondoLayout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(jLabel1))
+                    .addGroup(FondoLayout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(pistas, javax.swing.GroupLayout.PREFERRED_SIZE, 897, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(65, Short.MAX_VALUE))
+            .addGroup(FondoLayout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(Panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83)
+                .addComponent(revelar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(102, 102, 102))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FondoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(Label1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55))
+                .addGap(163, 163, 163))
+        );
+        FondoLayout.setVerticalGroup(
+            FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FondoLayout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addComponent(jLabel1)
+                .addGap(42, 42, 42)
+                .addComponent(Panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FondoLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(pistas, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                        .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(Panel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Panel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(42, 42, 42))
+                    .addGroup(FondoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(revelar, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(79, 79, 79))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane2, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(Fondo, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane2, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -192,13 +258,16 @@ public class Secreto extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField Amarillo;
-    private javax.swing.JLabel Label1;
+    private javax.swing.JDesktopPane Fondo;
     private javax.swing.JPanel Panel1;
-    private javax.swing.JTextArea Titulo;
+    private javax.swing.JPanel Panel2;
+    private javax.swing.JPanel Panel3;
     private javax.swing.JPasswordField Verde;
     private javax.swing.JPasswordField Violeta;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JDesktopPane jDesktopPane2;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField numero;
+    private javax.swing.JLabel pistas;
+    private javax.swing.JButton revelar;
     // End of variables declaration//GEN-END:variables
 }
