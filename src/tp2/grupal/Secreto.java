@@ -75,7 +75,7 @@ public class Secreto extends javax.swing.JFrame {
         Violeta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Violeta.setText("$");
         Violeta.setToolTipText("");
-        Violeta.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        Violeta.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Violeta.setEchoChar('$');
         Violeta.setName(""); // NOI18N
 
@@ -183,13 +183,13 @@ public class Secreto extends javax.swing.JFrame {
                     .addGroup(FondoLayout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addComponent(pistas, javax.swing.GroupLayout.PREFERRED_SIZE, 897, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
             .addGroup(FondoLayout.createSequentialGroup()
                 .addGap(51, 51, 51)
                 .addComponent(Panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(93, 93, 93)
                 .addComponent(revelar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addComponent(Panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(102, 102, 102))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FondoLayout.createSequentialGroup()
