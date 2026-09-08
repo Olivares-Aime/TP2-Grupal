@@ -21,11 +21,18 @@ public class Secreto extends javax.swing.JFrame {
     
     
     public Secreto() {
-        
-        initComponents();       
+
+        initComponents();
         codigoSecreto = random.nextInt(900) + 100; // Al abrir la aplicación se genera un número entre 100 y 999.
-      
+        
+        
+        String codigo = String.valueOf(codigoSecreto);
+
+        Violeta.setText(String.valueOf(codigo.charAt(0)));
+        Amarillo.setText(String.valueOf(codigo.charAt(1)));
+        Verde.setText(String.valueOf(codigo.charAt(2)));
     }
+    
 
     
    
@@ -259,9 +266,17 @@ public class Secreto extends javax.swing.JFrame {
         
     }//GEN-LAST:event_txtNumeroIntentoActionPerformed
      
-    
+   
     private void revelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_revelarActionPerformed
-        
+        if (ayudas == 0) {
+            Violeta.setEchoChar((char) 0);
+            ayudas++;
+        } else if (ayudas == 1) {
+            Amarillo.setEchoChar((char) 0);
+            ayudas++;
+        } else {
+            JOptionPane.showMessageDialog(this, "No hay más ayudas.");
+        }
     }//GEN-LAST:event_revelarActionPerformed
 
     private void AmarilloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AmarilloActionPerformed
