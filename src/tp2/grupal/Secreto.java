@@ -1,4 +1,6 @@
 package tp2.grupal;
+import java.awt.Image;
+import java.net.URL;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -7,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JDesktopPane;
 import javax.swing.JTextField;
 import java.util.Random;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 
@@ -21,11 +24,19 @@ public class Secreto extends javax.swing.JFrame {
     
     
     public Secreto() {
-        
-        initComponents();       
+
+        initComponents();
         codigoSecreto = random.nextInt(900) + 100; // Al abrir la aplicación se genera un número entre 100 y 999.
-      
+        
+        // convertimos el numero en string, lo ubico como caracter//
+        // lo designo a un componente//
+        String codigo = String.valueOf(codigoSecreto);
+
+        Violeta.setText(String.valueOf(codigo.charAt(0)));
+        Amarillo.setText(String.valueOf(codigo.charAt(1)));
+        Verde.setText(String.valueOf(codigo.charAt(2)));
     }
+    
 
     
    
@@ -45,6 +56,7 @@ public class Secreto extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtNumeroIntento = new javax.swing.JTextField();
         Panel3 = new javax.swing.JPanel();
+        Imagen = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 255));
@@ -161,15 +173,21 @@ public class Secreto extends javax.swing.JFrame {
         Panel3.setBackground(new java.awt.Color(0, 153, 153));
         Panel3.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
 
+        Imagen.setFont(new java.awt.Font("Lucida Sans", 2, 10)); // NOI18N
+        Imagen.setForeground(new java.awt.Color(0, 51, 102));
+        Imagen.setText("Tu trofeo se esconde ACA");
+
         javax.swing.GroupLayout Panel3Layout = new javax.swing.GroupLayout(Panel3);
         Panel3.setLayout(Panel3Layout);
         Panel3Layout.setHorizontalGroup(
             Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 167, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Imagen, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
         );
         Panel3Layout.setVerticalGroup(
             Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(Imagen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         Fondo.setLayer(Panel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -191,13 +209,13 @@ public class Secreto extends javax.swing.JFrame {
                     .addGroup(FondoLayout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addComponent(pistas, javax.swing.GroupLayout.PREFERRED_SIZE, 897, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(FondoLayout.createSequentialGroup()
                 .addGap(51, 51, 51)
                 .addComponent(Panel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(93, 93, 93)
                 .addComponent(revelar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(Panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(102, 102, 102))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FondoLayout.createSequentialGroup()
@@ -247,7 +265,26 @@ public class Secreto extends javax.swing.JFrame {
     
     // AGREGO MÉTODO REUTILIZABLE. Adivinar el número con o sin intentos.
     private void victoria() {
+        // atrapo la url en un try catch por si hay errores no deje de ejecutar el programa
+        
+        try {  // importo URL e ImageIcon para usar la imagen del URL 
+            URL url = new URL ("https://images.vexels.com/media/users/3/202189/isolated"
+                    + "/lists/4f3a5cb84297726d74d69dce22676f83-trofeo-numero-1-plano.png");
+            
+            ImageIcon trofeo= new ImageIcon (url); 
+            
+            Image img = trofeo.getImage().getScaledInstance(
+            120,120,Image.SCALE_SMOOTH );
+                    
+            Imagen.setIcon(new ImageIcon(img));   
+             
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this," El trofeo no ha cargado");
+        }
         JOptionPane.showMessageDialog(this, "¡Ganaste! Cantidad de intentos: " + intentos);
+        
+        
+        
     }    
     
     private void txtNumeroIntentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumeroIntentoActionPerformed
@@ -259,9 +296,17 @@ public class Secreto extends javax.swing.JFrame {
         
     }//GEN-LAST:event_txtNumeroIntentoActionPerformed
      
-    
+   
     private void revelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_revelarActionPerformed
-        
+        if (ayudas == 0) {
+            Violeta.setEchoChar((char) 0);
+            ayudas++;
+        } else if (ayudas == 1) {
+            Amarillo.setEchoChar((char) 0);
+            ayudas++;
+        } else {
+            JOptionPane.showMessageDialog(this, "No hay más ayudas.");
+        }
     }//GEN-LAST:event_revelarActionPerformed
 
     private void AmarilloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AmarilloActionPerformed
@@ -328,6 +373,7 @@ public class Secreto extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField Amarillo;
     private javax.swing.JDesktopPane Fondo;
+    private javax.swing.JLabel Imagen;
     private javax.swing.JPanel Panel1;
     private javax.swing.JPanel Panel2;
     private javax.swing.JPanel Panel3;
